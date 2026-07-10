@@ -6,7 +6,7 @@
 # result = " ".join(words)
 # print(result)
 
-from transformations import convert_hex, convert_bin
+from transformations import convert_hex, convert_bin, convert_case
 
 # text1 = "1E (hex) files were added"
 # result = convert_hex(text1)
@@ -22,3 +22,17 @@ print(convert_hex(text1))
 text2 = "It has been 10 (bin) years"
 print(convert_bin(text2))
 
+# word  = "HELLO"
+# print(word.lower())
+
+# word2 = "hello"
+# print(word2.upper())
+
+# word3 = "hello alexander"
+# print(word3.capitalize())
+
+text3 = "python (up)"
+print(convert_case(text3, "up"))
+
+text4 = "python (cap)"
+print(convert_case(text4, "cap"))
