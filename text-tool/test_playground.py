@@ -51,3 +51,6 @@ print(fix_quotes("As Elton John said: ' I am the most well-known homosexual in t
 print(fix_a_an("There it was. A amazing rock!"))
 print(fix_a_an("I need a hero"))
 print(fix_a_an("I need a book"))
+
+print(fix_punctuation("I was thinking ... You were right"))
+print(fix_punctuation("What is happening !?"))
