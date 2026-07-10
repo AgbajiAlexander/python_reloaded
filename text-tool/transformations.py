@@ -3,7 +3,7 @@ def convert_hex(text):
     result_words =[]
 
     for i in range(len(words)):
-        if words[i] == "(hex)"
+        if words[i] == "(hex)":
             result_words.pop()
             hex_value = words[i-1]
             decimal_value = int(hex_value, 16)
