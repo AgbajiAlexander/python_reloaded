@@ -1,3 +1,5 @@
+import re
+
 def convert_hex(text):
     words = text.split()
     result_words =[]
@@ -51,3 +53,19 @@ def convert_case(text, mode):
             result_words.append(words[i])
     
     return " ".join(result_words)
+
+def normalize_tags(text):
+    pattern = r'\(\s*(hex|bin|up|low|cap)\s*(,\s*\d+\s*)?\)'
+
+    def replacer(match):
+        print("FULL MATCH:", match.group(0))
+        print("GROUP 1 (tag):", match.group(1))
+        print("GROUP 2 (count):", match.group(2))
+        tag_name = match.group(1)
+        count_part = match.group(2)
+        if count_part:
+            count_part = count_part.replace(" ","")
+            return f"({tag_name}{count_part})"
+        else:
+            return f"({tag_name})"
+    return re.sub(pattern, replacer, text)

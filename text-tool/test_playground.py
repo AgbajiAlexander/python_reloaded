@@ -6,7 +6,7 @@
 # result = " ".join(words)
 # print(result)
 
-from transformations import convert_hex, convert_bin, convert_case
+from transformations import convert_hex, convert_bin, convert_case, normalize_tags
 
 # text1 = "1E (hex) files were added"
 # result = convert_hex(text1)
@@ -36,3 +36,6 @@ print(convert_case(text3, "up"))
 
 text4 = "python (cap)"
 print(convert_case(text4, "cap"))
+
+print(normalize_tags("This is so exciting (up, 2)"))
+print(normalize_tags("go (up)"))
